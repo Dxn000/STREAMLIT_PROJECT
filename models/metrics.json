@@ -1,0 +1,51 @@
+{
+    "best_model": "Gradient Boosting Regressor",
+    "features": [
+        "ambient_temperature",
+        "module_temperature",
+        "temp_diff",
+        "irradiation",
+        "daily_yield",
+        "hour"
+    ],
+    "target": "ac_power",
+    "dataset_rows": 45680,
+    "benchmark": {
+        "Linear Regression (Baseline)": {
+            "cv_r2_mean": 0.9811,
+            "test_r2": 0.9837,
+            "test_mae_kw": 25.68,
+            "test_rmse_kw": 51.29,
+            "daytime_mape_pct": 9.16
+        },
+        "Ridge Regression (L2)": {
+            "cv_r2_mean": 0.9811,
+            "test_r2": 0.9837,
+            "test_mae_kw": 25.67,
+            "test_rmse_kw": 51.29,
+            "daytime_mape_pct": 9.18
+        },
+        "Random Forest Regressor": {
+            "cv_r2_mean": 0.9841,
+            "test_r2": 0.9893,
+            "test_mae_kw": 16.83,
+            "test_rmse_kw": 41.54,
+            "daytime_mape_pct": 5.05
+        },
+        "Gradient Boosting Regressor": {
+            "cv_r2_mean": 0.9847,
+            "test_r2": 0.9905,
+            "test_mae_kw": 17.18,
+            "test_rmse_kw": 39.11,
+            "daytime_mape_pct": 5.37
+        }
+    },
+    "feature_importances": {
+        "ambient_temperature": 0.0006,
+        "module_temperature": 0.0005,
+        "temp_diff": 0.0009,
+        "irradiation": 0.995,
+        "daily_yield": 0.0019,
+        "hour": 0.0011
+    }
+}
